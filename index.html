@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Calvo | Industrial & Innovation Portfolio</title>
+    <title>Victor Calvo | Product Experience & Innovation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -11,6 +11,8 @@
         .glass-card { background: #0a0a0a; border: 1px solid #1a1a1a; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; height: 100%; }
         .glass-card:hover { border-color: #404040; transform: translateY(-4px); }
         .tag { background: #1a1a1a; color: #a3a3a3; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        /* NEW: AI Integration Badge */
+        .ai-badge { background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; padding: 4px 10px; border-radius: 4px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
         .section-title { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.3em; color: #525252; text-transform: uppercase; margin-bottom: 2rem; display: block; border-left: 2px solid #525252; padding-left: 1rem; }
         .hidden-view { display: none; opacity: 0; }
         .active-view { display: block; opacity: 1; animation: fadeIn 0.6s ease; }
@@ -22,85 +24,95 @@
 </head>
 <body class="antialiased">
 
-    <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-black/90 backdrop-blur-md border-b border-white/5">
         <div class="font-extrabold text-xl tracking-tighter uppercase cursor-pointer" onclick="showHome()">Victor Calvo</div>
         <div id="nav-links" class="hidden md:flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em]">
-            <a href="#thesis" class="hover:text-neutral-400">Thesis</a>
-            <a href="#digital" class="hover:text-neutral-400">Digital</a>
+            <a href="#thesis" class="hover:text-neutral-400">Strategy</a>
+            <a href="#digital" class="hover:text-neutral-400">Interaction</a>
             <a href="#industrial" class="hover:text-neutral-400">Industrial</a>
-            <a href="#branding" class="hover:text-neutral-400">Branding</a>
+            <a href="#branding" class="hover:text-neutral-400">Identity</a>
         </div>
         <button id="back-btn" onclick="showHome()" class="hidden text-[10px] font-black uppercase tracking-widest border border-white/40 px-6 py-2 rounded-full hover:bg-white hover:text-black transition">← Back to Portfolio</button>
     </nav>
 
-    <!-- HOME VIEW -->
     <main id="home-view" class="max-w-7xl mx-auto px-6 pt-40 pb-20 active-view">
         
-        <!-- ABOUT SECTION -->
         <section class="mb-48 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
             <div class="md:col-span-3">
                 <img src="profile.jpg" alt="Victor Calvo" class="profile-img">
             </div>
             <div class="md:col-span-6">
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[0.9]">Innovation <br/>& Design.</h1>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[0.9]">Designing the <br/>Future of <br/>Product Experience.</h1>
                 <p class="text-lg text-neutral-300 leading-relaxed mb-6">
-                    I am a Master’s student in <span class="text-white font-semibold">Innovation Management</span> at FH Upper Austria, building upon a strong foundation in <span class="text-white font-semibold">Industrial Design and Product Development Engineering</span> from the University of Zaragoza. 
+                    I am an Industrial Design Engineer and M.Sc. Innovation student at FH Upper Austria, thriving in the <span class="text-white font-semibold italic">"Alpine Playground"</span> where technical logic meets creative disruption.
                 </p>
                 <p class="text-neutral-400 text-md leading-relaxed mb-6">
-                    I combine a "hands-on" creative mentality with structural planning and strategic management. My work focuses on creating beautiful, functional, and user-centric interfaces through AI-driven design and rigorous engineering logic. I am an IPMA Level D Certified Project Management Associate, committed to delivering high-impact digital and physical experiences.
+                    I bridge the gap between <span class="text-white font-semibold">innovation strategy</span> and <span class="text-white font-semibold">hands-on design</span>. My focus lies in developing user-centric solutions that challenge conventions, meaningfully integrating AI tools to streamline the design process and enhance visualization.
                 </p>
             </div>
             <div class="md:col-span-3 space-y-8 border-l border-neutral-800 pl-8">
-                <div><p class="section-title !mb-2">Location</p><p class="text-sm text-neutral-400 italic">Austria / Spain</p></div>
+                <div><p class="section-title !mb-2">Base</p><p class="text-sm text-neutral-400 italic">Thalheim bei Wels, Austria</p></div>
                 <div>
                     <p class="section-title !mb-2">Software Stack</p>
                     <p class="text-sm text-neutral-400 leading-loose">
                         Figma, Adobe Creative Cloud, Solidworks, AutoCAD, D5 Render, Keyshot, Autodesk Inventor, Sketchup.
                     </p>
                 </div>
+                    <p class="section-title !mb-2">Skills for KISKA</p>
+                    <p class="text-sm text-neutral-400 leading-loose">
+                        Product Experience Design, Interaction Design Affinity, AI-Driven Visualization, Strategic Management.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- SECTION 01: THESIS -->
         <section id="thesis" class="mb-40">
-            <span class="section-title">01 / Bachelor Thesis</span>
+            <span class="section-title">01 / Design Strategy & Mobility</span>
             <div class="glass-card rounded-3xl overflow-hidden" onclick="openProject('thesis')">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <img src="thesis-swap.jpg" class="w-full h-full object-cover opacity-70">
                     <div class="p-12 flex flex-col justify-center">
-                        <h3 class="text-4xl font-bold mb-4 italic">Swap & Power</h3>
-                        <p class="text-neutral-400 mb-6">Sustainable battery swap stations for EV logistics. Deep-dive into structural design and IoT ecosystem control.</p>
-                        <span class="tag w-fit">Explore Case Study</span>
+                        <div class="flex gap-2 mb-4"><span class="tag">Mobility</span><span class="ai-badge">AI Integrated</span></div>
+                        <h3 class="text-4xl font-bold mb-4 italic">Swap & Power Ecosystem</h3>
+                        <p class="text-neutral-400 mb-6">More than a station: A full IoT service design for EV logistics. This project explores the synergy between modular structural engineering and digital user-flow optimization.</p>
+                        <span class="tag w-fit">View Strategic Case Study</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 02: DIGITAL EXPERIENCE -->
         <section id="digital" class="mb-40">
-            <span class="section-title">02 / Digital Experience</span>
+            <span class="section-title">02 / Interaction Design Affinity</span>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="glass-card rounded-3xl p-6" onclick="openProject('splitta')">
                     <div class="bg-[#0f0f0f] rounded-2xl mb-6 flex justify-center items-center overflow-hidden aspect-video p-12">
                         <img src="splitta-app.jpg" class="h-full w-full object-contain">
                     </div>
-                    <h4 class="text-2xl font-bold mb-2 px-2 italic">Splitta App</h4>
-                    <p class="text-neutral-500 text-sm px-2 mb-2">View 6 App Interface Frames</p>
+                    <div class="flex justify-between items-start px-2">
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2 italic">Splitta App</h4>
+                            <p class="text-neutral-500 text-sm mb-2">Interface flow for household interaction.</p>
+                        </div>
+                        <span class="ai-badge">AI-Driven UX</span>
+                    </div>
                 </div>
                 <div class="glass-card rounded-3xl p-6" onclick="openProject('swapapp')">
                     <div class="bg-[#0f0f0f] rounded-2xl mb-6 flex justify-center items-center overflow-hidden aspect-video p-12">
                         <img src="swap-app.jpg" class="h-full w-full object-contain">
                     </div>
-                    <h4 class="text-2xl font-bold mb-2 px-2 italic">Swap App UI</h4>
-                    <p class="text-neutral-500 text-sm px-2 mb-2">View Mobile UI Flow</p>
+                    <div class="flex justify-between items-start px-2">
+                        <div>
+                            <h4 class="text-2xl font-bold mb-2 italic">Swap & Power UI</h4>
+                            <p class="text-neutral-500 text-sm mb-2">Service-to-Machine interaction flow.</p>
+                        </div>
+                        <span class="tag">IoT Flow</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 03: INDUSTRIAL DESIGN -->
         <section id="industrial" class="mb-40">
-            <span class="section-title">03 / Industrial Design</span>
+            <span class="section-title">03 / Industrial Design Engineering</span>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="glass-card rounded-2xl p-4" onclick="openProject('cargobike')">
                     <img src="cargobike.jpg" class="rounded-xl mb-4 w-full aspect-square object-cover">
@@ -121,7 +133,6 @@
             </div>
         </section>
 
-        <!-- SECTION 04: BRANDING -->
         <section id="branding" class="mb-40">
             <span class="section-title">04 / Identity Design</span>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -141,46 +152,46 @@
         </section>
     </main>
 
-    <!-- PROJECT DETAIL VIEW -->
     <main id="detail-view" class="max-w-7xl mx-auto px-6 pt-40 pb-20 hidden-view">
         <div id="detail-content"></div>
     </main>
 
     <footer class="border-t border-neutral-900 py-20 px-6 text-center">
-        <p class="text-neutral-600 text-[10px] font-bold uppercase tracking-widest">© 2026 Victor Calvo • vcalvoasensio@gmail.com</p>
+        <p class="text-neutral-600 text-[10px] font-bold uppercase tracking-widest">© 2026 Victor Calvo • Wels, Austria</p>
     </footer>
 
     <script>
         const projectData = {
-            'thesis': { type: 'standard', title: 'Swap & Power', desc: 'This modular battery swap station is a transportable, container-compatible infrastructure designed for the rapid and automated replenishment of electric vehicle (EV) energy in under five minutes. The system centers on a retractable robotic platform housed within a standard 20-foot ISO shipping container frame, allowing for easy deployment via truck, train, or ship to urban centers, highways, or remote areas. Its modular architecture enables multiple units to be stacked or arranged side-by-side to scale capacity based on local demand, while an optional vending module provides drive-through convenience for snacks and digital goods directly from a vehicle window. To ensure high operational safety, the station integrates advanced thermal and gas sensors, fire-resistant compartmentalized storage, and an emergency flooding system to contain potential thermal events. Sustainability is prioritized through a hybrid power setup that utilizes solar panels and repurposes "second-life" batteries for stationary energy storage and grid load management. The entire ecosystem is managed via a dedicated mobile application that allows users to locate stations, view real-time battery health, reserve swap slots, and pre-purchase vending items.', images: ['thesis-swap.jpg', 'thesis-1.png', 'thesis-2.png', 'thesis-3.png', 'thesis-4.png'] },
+            'thesis': { 
+                type: 'standard', 
+                title: 'Swap & Power Ecosystem', 
+                desc: 'A comprehensive study on "second-life" energy infrastructure. Using AI tools for early-stage concept visualization and market analysis, I developed a modular battery swap station that functions as a transportable IoT hub for urban logistics. The design challenges traditional static infrastructure by being fully container-compatible and stackable, ensuring user-centric safety via advanced thermal sensing.', 
+                images: ['thesis-swap.jpg', 'thesis-1.png', 'thesis-2.jpg', 'thesis-3.jpg', 'thesis-4.png'] 
+            },
             'splitta': {
                 type: 'app',
-                title: 'Splitta Mobile UI',
-                desc: 'An end-to-end platform for apartment renting and household chore tracking.',
-                images: ['splitta-1.png', 'splitta-2.png', 'splitta-3.png', 'splitta-4.png', 'splitta-5.png']
+                title: 'Splitta: Interaction Design & Flow',
+                desc: 'Beyond UI, this detailed user flow maps the logical architecture for shared living interaction. I leveraged AI-assisted persona research to define a journey that streamlines conflict zones—like task completion and financial fines—creating a clean, purposeful brand experience. From Onboarding to the detailed Task List, every touchpoint is designed for minimal cognitive load.',
+                flowchart_image: 'splitta-flowchart.jpg', 
+                /* NEW: Property for the low-fidelity visual */
+                lofi_flowchart_image: 'splitta-lowfidelity.jpg', 
+                images: ['splitta-1.png', 'splitta-2.png', 'splitta-3.png', 'splitta-4.png', 'splitta-5.png', 'splitta-6.png']
             },
             'swapapp': {
                 type: 'app',
-                title: 'Swap & Power UI',
-                desc: '6-frame interface flow for the Battery Swap Station management.',
-                images: ['swap-1.png', 'swap-2.png', 'swap-3.png', 'swap-4.png', 'swap-5.png']
+                title: 'Swap & Power UI: IoT Interaction Logic',
+                desc: 'Beyond static frames, this 6-frame flow prioritizes the interaction logic between vehicle telematics and physical station hardware. By visualizing the IoT product experience flow, I ensured user safety and operational efficiency—proving technical feasibility and purposeful brand experience.',
+                flowchart_image: 'swap-flowchart.jpg', 
+                /* NEW: Property for the low-fidelity visual */
+                lofi_flowchart_image: 'swap-lowfidelity.jpg', 
+                images: ['swap-1.png', 'swap-2.png', 'swap-3.png', 'swap-4.png', 'swap-5.png', 'swap-6.png']
             },
             'cargobike': { type: 'standard', title: 'Emergency Cargo Bike', desc: 'Rapid medical logistics for congested urban environments.', images: ['cargobike.jpg'] },
             'woody': { type: 'standard', title: 'Woody', desc: 'Solar-integrated multi-tool speaker/lamp.', images: ['woody.jpg'] },
             'tent': { type: 'standard', title: 'Military Tent', desc: 'Fast-deploy geodesic structural design.', images: ['tent.jpg'] },
             'game': { type: 'standard', title: 'Disaster Game', desc: 'Educational strategy and preparedness game.', images: ['game.jpg'] },
-            'biotech': { 
-                type: 'branding', 
-                title: 'Biotech Kids', 
-                desc: 'Branding and identity applications for optical technology innovation.', 
-                images: ['logo-biotech.jpg', 'biotech-calendar.png', 'biotech-pen.png'] 
-            },
-            'kiroline': { 
-                type: 'branding', 
-                title: 'KiroLine', 
-                desc: 'Identity and merchandise design for children entertainment.', 
-                images: ['logo-kiroline.jpg', 'kiroline-polo.png', 'kiroline-clips.png'] 
-            },
+            'biotech': { type: 'branding', title: 'Biotech Kids', desc: 'Branding for optical technology innovation.', images: ['logo-biotech.jpg', 'biotech-calendar.png', 'biotech-pen.png'] },
+            'kiroline': { type: 'branding', title: 'KiroLine', desc: 'Identity for children entertainment.', images: ['logo-kiroline.jpg', 'kiroline-polo.png', 'kiroline-clips.png'] },
             'stadium': { type: 'branding', title: 'Stadium Casablanca', desc: 'International competition logo identity.', images: ['logo-stadium.jpg', 'stadium-camiseta.png'] }
         };
 
@@ -188,11 +199,54 @@
             const data = projectData[id];
             let contentHtml = '';
 
+            /* Dynamic rendering logic */
             if (data.type === 'app') {
                 const frameHtml = data.images.map(img => `<div class="mobile-frame"><img src="${img}" class="w-full h-full object-cover"></div>`).join('');
-                contentHtml = `<h2 class="text-6xl font-extrabold mb-6 italic">${data.title}</h2><p class="text-xl text-neutral-400 mb-16 max-w-2xl">${data.desc}</p><div class="app-grid">${frameHtml}</div>`;
+                
+                // Collect the entire product experience process section
+                let processHtml = '';
+
+                // 1. Render High-Fidelity Flowchart if exists (Top Priority)
+                if (data.flowchart_image) {
+                    processHtml += `
+                        <div class="mb-16 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900/50 p-6 md:p-10 shadow-2xl shadow-neutral-950/20">
+                            <img src="${data.flowchart_image}" alt="High-Fidelity Interaction Flowchart for ${data.title}" class="w-full h-auto rounded-xl">
+                        </div>
+                    `;
+                }
+
+                // 2. NEW: Render Low-Fidelity Exploration Section if exists (Immediately Below)
+                if (data.lofi_flowchart_image) {
+                    processHtml += `
+                        <div class="border-t border-neutral-800 pt-16 mt-16">
+                            <h4 class="text-3xl font-bold mb-8 italic">From Sketch to Logic: Low-Fidelity Exploration</h4>
+                        </div>
+                        <div class="mb-16 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900/50 p-6 md:p-10 shadow-2xl shadow-neutral-950/20">
+                            <img src="${data.lofi_flowchart_image}" alt="Low-Fidelity sketches for ${data.title}" class="w-full h-auto rounded-xl opacity-80 hover:opacity-100 transition duration-300">
+                        </div>
+                    `;
+                }
+
+                // 3. Setup title for final frames grid
+                let framesTitleHtml = '';
+                if (data.images && data.images.length > 0) {
+                    framesTitleHtml = `
+                        <div class="border-t border-neutral-800 pt-16 mt-16">
+                            <h4 class="text-3xl font-bold mb-8 italic">Detailed Interface Frames</h4>
+                        </div>
+                    `;
+                }
+
+                contentHtml = `
+                    <h2 class="text-6xl font-extrabold mb-6 italic">${data.title}</h2>
+                    <p class="text-xl text-neutral-400 mb-16 max-w-2xl">${data.desc}</p>
+                    ${processHtml}
+                    ${framesTitleHtml}
+                    <div class="app-grid">${frameHtml}</div>
+                `;
             } else if (data.type === 'branding') {
-                const imgHtml = data.images.map(img => `<div class="bg-white rounded-3xl p-12 max-w-3xl mx-auto mb-12"><img src="${img}" class="w-full h-auto object-contain mx-auto"></div>`).join('');
+                /* BUG FIX: Reverting to the large single-column layout for proper mockup display */
+                const imgHtml = data.images.map(img => `<div class="bg-white rounded-3xl p-12 max-w-3xl mx-auto mb-12"><img src="${img}" class="h-full w-full object-contain mx-auto"></div>`).join('');
                 contentHtml = `<h2 class="text-6xl font-extrabold mb-6 italic">${data.title}</h2><p class="text-xl text-neutral-400 mb-16 max-w-2xl">${data.desc}</p>${imgHtml}`;
             } else {
                 const imgHtml = data.images.map(img => `<img src="${img}" class="w-full rounded-3xl mb-12 border border-white/5">`).join('');
@@ -217,5 +271,4 @@
         }
     </script>
 </body>
-
 </html>
